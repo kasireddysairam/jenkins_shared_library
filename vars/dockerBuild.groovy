@@ -1,8 +1,8 @@
 def call(String project,String ImageTag,String hubuser) {
 sh """
-docker image build -t   ${hubuser}/${project} .
-docker image tag   ${hubuser}/${project}  ${hubuser}/${project}:${ImageTag}
-docker image tag   ${hubuser}/${project}  ${hubuser}/${project}:latest
+sudo docker image build -t   ${hubuser}/${project} .
+sudo docker image tag   ${hubuser}/${project}  ${hubuser}/${project}:${ImageTag}
+sudo docker image tag   ${hubuser}/${project}  ${hubuser}/${project}:latest
 """
 }
 
